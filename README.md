@@ -93,7 +93,6 @@ element 4 has value 9
 ```
 fun getLength(string: String?) = string?.length ?: 0
 ```
-* Can extend properties or functions.
 * `===` tests reference equality of object.
 * Kotlin has support for classes
 * `data` class is similar to struct.  Comes with a few extra benefits
@@ -136,6 +135,17 @@ fun main() {
 }
 ```
 * Annotations for attaching metadata to code.
+* Can extend properties or functions.  An extension function is a member function of a class that is defined outside the class.
+```
+fun String.removeFirstLastChar(): String =  this.substring(1, this.length - 1)
+
+fun main() {
+    val myString= "Hello Everyone"
+    val result = myString.removeFirstLastChar()
+    println("Result is: $result")
+}
+Result is: ello Everyon
+```
 
 ## What you can do with it
 * [Build a mobile application](https://kotlinlang.org/docs/mobile/create-first-app.html): Targeting both Android and iOS using Android Studio.
