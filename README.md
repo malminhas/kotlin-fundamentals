@@ -6,6 +6,7 @@ Initial rough notes on Kotlin development after undertaking OReilly Kotlin funda
 * Built-in null safety.
 * First class coroutine support.
 * Discourages inheritance in favour of composition.
+* Allows you to use the same language for web + mobile apps and microservices.
 * JetBrains are really pushing multiplatform Kotlin.
 
 ## Environment
@@ -135,6 +136,14 @@ fun main() {
 }
 ```
 * Annotations for attaching metadata to code.
+
+## What you can do with it
+* [Build a mobile application](https://kotlinlang.org/docs/mobile/create-first-app.html): Targeting both Android and iOS using Android Studio.
+* [Build a simple web site](https://play.kotlinlang.org/hands-on/Creating%20a%20website%20with%20Ktor/01_introduction): Static site using `ktor` with templates and IntelliJ IDEA.
+* [Create a full stack web app](https://play.kotlinlang.org/hands-on/Full%20Stack%20Web%20App%20with%20Kotlin%20Multiplatform/01_Introduction): Kotlin/JVM server and Kotlin/JS client using IntelliJ IDEA.  The Kotlin/JS client can [optionally be built with React](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/01_Introduction).
+* [Create a RESTful microservice](https://play.kotlinlang.org/hands-on/Creating%20HTTP%20APIs%20with%20Ktor/01_introduction): Using `ktor` and IntelliJ IDEA.
+* [Create a CLI tool](https://play.kotlinlang.org/hands-on/Introduction%20to%20Kotlin%20Native/01_Introduction): For example a CLI that wraps `curl`.
+
 
 ## Frameworks
 * [Micronaut](https://micronaut.io/) - Lightweight framework for writing microservices.  Supports: Java, Kotlin, Groovy
