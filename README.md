@@ -56,8 +56,8 @@ fun main(){
 * Lists, Arrays, HashMaps.  `listOf()`,`arrayOf()` and `mapOf()`:
 ```
 fun main() {
-	val map = mapOf(Pair("a",1), "b".to(2), "c" to 3)
-	for ((k, v) in map) {
+    val map = mapOf(Pair("a",1), "b".to(2), "c" to 3)
+    for ((k, v) in map) {
         println("$k = $v")
     }
 }
@@ -76,7 +76,7 @@ when (n) {
 * `for` loop can be used to enumerate items:
 ```
 fun main() {
-	val arr = intArrayOf(3,1,4,5,9)
+    val arr = intArrayOf(3,1,4,5,9)
     for ((index,element) in arr.withIndex()){
         println("element $index has value $element")
     }
@@ -117,6 +117,22 @@ Person(first=Spiderman, last=null, dob=1983-11-10), 0
 ```
 * Kotlin has support for generic types:
 ```
+import kotlin.test.*
+
+class PClass<A>(private val value: A) {
+    fun getValue(): A {
+        return value
+    }
+}
+
+fun main() {
+    val p1 = PClass<String>("I am a string")
+    val r1 = p1.getValue()
+    assertTrue(r1 is String)
+    val p2 = PClass<Int>(32)
+    val r2 = p2.getValue()
+    assertTrue(r2 is Int)
+}
 ```
 * Annotations for attaching metadata to code.
 
