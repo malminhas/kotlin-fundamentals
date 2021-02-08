@@ -2,6 +2,14 @@
 
 Initial rough notes on Kotlin development after undertaking OReilly Kotlin fundamentals and Kotlin Bootcamp.
 
+##### Table of Contents  
+[Main Attractions](#main-attractions)  
+[Environment](#environment)  
+[Language Basics](#language-basics) 
+[What you can build with Kotlin](#what-can-you-build) 
+[Frameworks](#frameworks)
+
+<a name="main-attractions"/>
 ## Main attractions
 * Built-in null safety.
 * First class coroutine support.
@@ -9,6 +17,7 @@ Initial rough notes on Kotlin development after undertaking OReilly Kotlin funda
 * Allows you to use the same language for web + mobile apps and microservices.
 * JetBrains are really pushing multiplatform Kotlin.
 
+<a name="environment"/>
 ## Environment
 * Statically typed compiled language.  Compiled to Java byte code.
 * Handy online [playground](https://play.kotlinlang.org/) which you can access on your phone.
@@ -44,6 +53,7 @@ Type :help for help, :quit for quit
 ```
 * Finally, there is support for a Kotlin kernel in Jupyter.
 
+<a name="language-basics"/>
 ## Language Basics
 * Hello World:
 ```
@@ -147,14 +157,15 @@ fun main() {
 Result is: ello Everyon
 ```
 
-## What you can do with it
+<a name="what-can-you-build"/>
+## What you can build with Kotlin
 * [Build a mobile application](https://kotlinlang.org/docs/mobile/create-first-app.html): Targeting both Android and iOS using Android Studio.
 * [Build a simple web site](https://play.kotlinlang.org/hands-on/Creating%20a%20website%20with%20Ktor/01_introduction): Static site using `ktor` with templates and IntelliJ IDEA.
 * [Create a full stack web app](https://play.kotlinlang.org/hands-on/Full%20Stack%20Web%20App%20with%20Kotlin%20Multiplatform/01_Introduction): Kotlin/JVM server and Kotlin/JS client using IntelliJ IDEA.  The Kotlin/JS client can [optionally be built with React](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/01_Introduction).
 * [Create a RESTful microservice](https://play.kotlinlang.org/hands-on/Creating%20HTTP%20APIs%20with%20Ktor/01_introduction): Using `ktor` and IntelliJ IDEA.
 * [Create a CLI tool](https://play.kotlinlang.org/hands-on/Introduction%20to%20Kotlin%20Native/01_Introduction): For example a CLI that wraps `curl`.
 
-
+<a name="frameworks"/>
 ## Frameworks
 * [Micronaut](https://micronaut.io/) - Lightweight framework for writing microservices.  Supports: Java, Kotlin, Groovy
 * [SpringBoot](https://spring.io/projects/spring-boot) - Industry heavyweight framework for writing backends.  Supports: Java, Kotlin, Scala, Groovy
