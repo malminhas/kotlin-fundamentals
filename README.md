@@ -4,10 +4,10 @@ Initial rough notes on Kotlin development after undertaking OReilly Kotlin funda
 
 ## Table of Contents  
 [Main Attractions](#main-attractions)  
-[Environment](#environment)
-[Language Basics](#basics)
-[What you can build with Kotlin](#what-can-you-build)
-[Frameworks](#frameworks)
+[Environment](#environment)<br>
+[Language Basics](#language-basics)<br>
+[What you can build with Kotlin](#what-you-can-build-with-kotlin)<br>
+[Frameworks](#frameworks)<br>
 
 ## Main attractions
 * Built-in null safety.
