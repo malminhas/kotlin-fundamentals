@@ -2,14 +2,10 @@
 
 Initial rough notes on Kotlin development after undertaking OReilly Kotlin fundamentals and Kotlin Bootcamp.
 
-##### Table of Contents  
-[Main Attractions](#main-attractions)  
-[Environment](#environment)  
-[Language Basics](#language-basics) 
-[What you can build with Kotlin](#what-can-you-build) 
-[Frameworks](#frameworks)
+## Table of Contents  
 
-<a name="main-attractions"/>
+
+<a name="attractions"/>
 ## Main attractions
 * Built-in null safety.
 * First class coroutine support.
@@ -53,7 +49,7 @@ Type :help for help, :quit for quit
 ```
 * Finally, there is support for a Kotlin kernel in Jupyter.
 
-<a name="language-basics"/>
+<a name="basics"/>
 ## Language Basics
 * Hello World:
 ```
