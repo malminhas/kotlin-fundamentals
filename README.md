@@ -1,6 +1,6 @@
 # kotlin-fundamentals
 
-Initial rough notes on Kotlin development after undertaking OReilly Kotlin fundamentals and Kotlin Bootcamp.
+Initial rough notes on Kotlin development after undertaking the [OReilly Kotlin fundamentals](https://learning.oreilly.com/live-training/courses/kotlin-fundamentals) course and the Google [Kotlin Bootcamp](https://developer.android.com/codelabs/kotlin-bootcamp-welcome#0).
 
 ## Table of Contents  
 [Main Attractions](#main-attractions)  
