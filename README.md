@@ -6,6 +6,7 @@ Initial rough notes on Kotlin development after undertaking the [OReilly Kotlin 
 [Main Attractions](#main-attractions)  
 [Environment](#environment)<br>
 [Language Basics](#language-basics)<br>
+[Worked Examples](#worked-examples)<br>
 [What you can build with Kotlin](#what-you-can-build-with-kotlin)<br>
 [Frameworks](#frameworks)<br>
 
@@ -153,6 +154,11 @@ fun main() {
 }
 Result is: ello Everyon
 ```
+
+## Worked Examples
+This repository contains some more extended worked examples to showcase different aspects of Kotlin:
+* [Astro](Astro): IntelliJ project that contains example of how to invoke web services APIs and deserialize JSON to a `data` class.
+* [Person](Person): IntelliJ projec that illustrates how Kotlin classes work using `interface`, `open` and `override`.
 
 ## What you can build with Kotlin
 * [Build a mobile application](https://kotlinlang.org/docs/mobile/create-first-app.html): Targeting both Android and iOS using Android Studio.
