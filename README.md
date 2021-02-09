@@ -7,6 +7,7 @@ Initial rough notes on Kotlin development after undertaking the [OReilly Kotlin 
 [Environment](#environment)<br>
 [Language Basics](#language-basics)<br>
 [Worked Examples](#worked-examples)<br>
+[Coding Conventions](#coding-conventions)<br>
 [What you can build with Kotlin](#what-you-can-build-with-kotlin)<br>
 [Frameworks](#frameworks)<br>
 
@@ -159,6 +160,38 @@ Result is: ello Everyon
 This repository contains some more extended worked examples to showcase different aspects of Kotlin:
 * [Astro](Astro): IntelliJ project that contains example of how to invoke web services APIs and deserialize JSON to a `data` class.
 * [Person](Person): IntelliJ projec that illustrates how Kotlin classes work using `interface`, `open` and `override`.
+
+## Coding Conventions
+Taken from [kotlinlang.org reference](https://kotlinlang.org/docs/reference/coding-conventions.html).
+### Class layout
+In this order:
+- Property declarations and initializer blocks
+- Secondary constructors
+- Method declarations
+- Companion object
+### Interfaces
+> When implementing an interface, keep the implementing members in the same order as members of the interface 
+### Naming
+- Use camelCase
+- 4 spaces for indentation, no tabs.
+### Formatting
+- Colon handling:
+```
+abstract class Foo<out T : Any> : IFoo {
+    abstract fun foo(a: Int): T
+}
+```
+- Prefer trailing commas:
+> To enable trailing commas in the IntelliJ IDEA formatter, go to Settings | Editor | Code Style | Kotlin, open the Other tab and select the Use trailing comma option.
+### Lambda handling
+> If a call takes a single lambda, it should be passed outside of parentheses whenever possible.
+```
+list.filter { it > 10 }
+```
+### Scope functions
+> Kotlin provides a variety of functions to execute a block of code in the context of a given object: `let`, `run`, `with`, `apply`, and `also`
+> For the guidance on choosing the right scope function for your case, refer to [Scope Functions](https://kotlinlang.org/docs/reference/scope-functions.html).
+> The Kotlin standard library contains several functions whose sole purpose is to execute a block of code within the context of an object. When you call such a function on an object with a lambda expression provided, it forms a temporary scope. In this scope, you can access the object without its name. Such functions are called scope functions. There are five of them.
 
 ## What you can build with Kotlin
 * [Build a mobile application](https://kotlinlang.org/docs/mobile/create-first-app.html): Targeting both Android and iOS using Android Studio.
