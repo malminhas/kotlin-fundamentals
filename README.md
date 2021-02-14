@@ -16,11 +16,13 @@ Initial rough notes on Kotlin development after undertaking the [OReilly Kotlin 
 * First class coroutine support.
 * Discourages inheritance in favour of composition.
 * Allows you to use the same language for web + mobile apps and microservices.
+* Statically typed compiled language.  Compiled to Java byte code.
 * JetBrains are really pushing multiplatform Kotlin.
 
 ## Environment
-* Statically typed compiled language.  Compiled to Java byte code.
+### Playground
 * Handy online [playground](https://play.kotlinlang.org/) which you can access on your phone.
+### Local setup
 * Needs JVM.  Make sure you have Java 1.8 ideally installed:
 ```
 $ brew install java
@@ -44,22 +46,45 @@ $ java -jar foo.jar
 ```
 $ ./buildit foo
 ```
-* REPL also available from CLI as follows:
+### REPL
+* REPL also available from CLI.
 ```
 $ kotlin
 Welcome to Kotlin version 1.4.21 (JRE 15.0.1+9)
 Type :help for help, :quit for quit
 >>>
 ```
-* Finally, there is support for a Kotlin kernel in Jupyter.
-
-## Language Basics
-* Hello World:
+### Kotlin file
+* Hello World in a file named `hello.kt`:
 ```
 fun main(){
     print("Hello, World!")
 }
 ```
+* You compile and run it as follows:
+```
+$ kotlinc hello.kt -include-runtime -d hello.jar
+$ java -jar hello.jar
+```
+
+### Kotlin scripting
+* You can develop a Kotlin script using a `.kts` `hello.kts` as follows:
+```
+#!/usr/bin/env kotlinc -script
+println("Hello, World!")
+```
+* Compile and run it as follows:
+```
+$ kotlinc -script hello.kts
+```
+
+### Kotlin Jupyter kernel
+* A Kotlin kernel exists for Jupyter notebook. 
+* You set it up as follows:
+```
+```
+
+## Language Basics
 * In Kotlin almost everything is an expression which has a value even if that value is `Unit` (equivalent to void).
 * Two types of variable `val` and `var`.   Use `val` wherever possible and `var` only where necessary.
 * String interpolation.  `"I have ${a+b} things"`
