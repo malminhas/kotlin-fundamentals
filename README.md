@@ -201,7 +201,7 @@ In this order:
 - Secondary constructors
 - Method declarations
 - Companion object
-### Interfaces
+### Interfaces
 > When implementing an interface, keep the implementing members in the same order as members of the interface 
 ### Naming
 - Use camelCase
