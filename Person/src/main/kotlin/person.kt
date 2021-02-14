@@ -1,4 +1,5 @@
 /**
+ *  Refactored version of classes
  *	Interfaces are templates for functions.
  *	They can be added to classes.
  */

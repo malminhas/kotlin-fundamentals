@@ -7,7 +7,7 @@ import java.time.ZonedDateTime
 import java.util.TimeZone
 
 data class AstronautAssignment(
-    val name:String,
+    val name:  String,
     val craft: String
 )
 
@@ -18,12 +18,12 @@ data class AstronautResult(
 )
 
 class AstronautRequest {
+    operator fun invoke(): AstronautResult =
+        Gson().fromJson(URL(ASTRO_URL).readText(), AstronautResult::class.java)
+
     companion object {
         private const val ASTRO_URL = "http://api.open-notify.org/astros.json"
     }
-
-    operator fun invoke(): AstronautResult =
-        Gson().fromJson(URL(ASTRO_URL).readText(), AstronautResult::class.java)
 }
 
 data class IssPosition(
@@ -44,10 +44,6 @@ data class IssResponse(
 }
 
 class ISSRequest {
-    companion object {
-        private const val ISS_URL = "http://api.open-notify.org/iss-now.json"
-    }
-
     fun invoke(): IssResponse =
         Gson().fromJson(URL(ISS_URL).readText(), IssResponse::class.java)
 
@@ -59,19 +55,35 @@ class ISSRequest {
                 )
             )
         }.iss_position
+
+    companion object {
+        private const val ISS_URL = "http://api.open-notify.org/iss-now.json"
+    }
 }
 
 fun main(){
-    val r = AstronautRequest()
-    val response = r.invoke()
-    println(response)
-    println("Found ${response.number} astronauts in Space:")
-    println("-------------------------")
-    for ((name,craft) in response.people) {
-        println("$name on $craft")
+    val astronautRequest = AstronautRequest()
+    val astronautResponse = astronautRequest.invoke()
+    println(astronautResponse)
+
+    fun printAstronautNames(response: AstronautResult): String {
+        val astronauts = StringBuilder()
+        response.people.forEach {
+            with(it) {
+                astronauts.appendLine("$name on $craft")
+            }
+        }
+        return astronauts.toString()
     }
-    println("-------------------------")
-    val r2 = ISSRequest()
-    val response2 = r2.getPosition()
-    println(response2)
+
+    println("Found ${astronautResponse.number} astronauts in Space:")
+    println("""
+-------------------------
+${printAstronautNames(astronautResponse)}
+-------------------------
+    """.trimIndent())
+
+    val iSSRequest = ISSRequest()
+    val iSSResponse = iSSRequest.getPosition()
+    println(iSSResponse)
 }
