@@ -11,19 +11,22 @@ Initial rough notes on Kotlin development after undertaking the [OReilly Kotlin 
 [What you can build with Kotlin](#what-you-can-build-with-kotlin)<br>
 [Frameworks](#frameworks)<br>
 
-## Main attractions
+## Features
+* Kotlin is a statically typed compiled language for JVM.  
+* Compiled to Java byte code but can also be transpile to JavaScript.
+* Can also compile for other targets.
+* JetBrains are really pushing multiplatform Kotlin.
+### Main attractions
 * Built-in null safety.
 * First class coroutine support.
 * Discourages inheritance in favour of composition.
-* Allows you to use the same language for web + mobile apps and microservices.
-* Statically typed compiled language.  Compiled to Java byte code.
-* JetBrains are really pushing multiplatform Kotlin.
+* Same language can be used for web, mobile apps and microservices.
 
 ## Environment
 ### Playground
 * Handy online [playground](https://play.kotlinlang.org/) which you can access on your phone.
 ### Local setup
-* Needs JVM.  Make sure you have Java 1.8 ideally installed:
+* Make sure you have Java 1.8 installed for JVM:
 ```
 $ brew install java
 $ java -version
@@ -34,7 +37,7 @@ $ brew install kotlin
 $ kotlin -version
 Kotlin version 1.4.21-release-351 (JRE 15.0.1+9)
 ```
-* IntelliJ IDEA comes in two flavours - Community (free) and Ultimate (paid).
+* IntelliJ IDEA IDE comes in two flavours - Community (free) and Ultimate (paid).
 * Android Studio for Android dev.
 * IntelliJ IDEA and Android Studio are integrated with Gradle build tooling.
 * Can just use CLI as follows to compile and run a Kotlin self-contained CLI file `foo.kt`:
@@ -42,17 +45,18 @@ Kotlin version 1.4.21-release-351 (JRE 15.0.1+9)
 $ kotlinc foo.kt -include-runtime -d foo.jar
 $ java -jar foo.jar
 ```
-* `buildit` script in this repo will compile to .jar and run as follows on any Kotlin file foo.kt:
+* `buildit` script in this repo will compile to `.jar` and run as follows on any Kotlin file `foo.kt`:
 ```
 $ ./buildit foo
 ```
 ### REPL
-* REPL also available from CLI.
+* Kotlin REPL also available from CLI.
 ```
 $ kotlin
 Welcome to Kotlin version 1.4.21 (JRE 15.0.1+9)
 Type :help for help, :quit for quit
->>>
+>>> :load foo.kt
+>>> main()
 ```
 ### Kotlin file
 * Hello World in a file named `hello.kt`:
@@ -82,7 +86,9 @@ $ kotlinc -script hello.kts
 * A Kotlin kernel exists for Jupyter notebook. 
 * You set it up as follows:
 ```
+$ pip install kotlin-jupyter-kernel
 ```
+* Check out the attached [Kotlin notebook](kotlin-playbook.ipynb)
 
 ## Language Basics
 * In Kotlin almost everything is an expression which has a value even if that value is `Unit` (equivalent to void).
@@ -127,7 +133,8 @@ element 4 has value 9
 ```
 fun getLength(string: String?) = string?.length ?: 0
 ```
-* `===` tests reference equality of object.
+* `==` tests _structural equality_ of values.
+* `===` tests _reference equality_ of references.
 * Kotlin has support for classes
 * `data` class is similar to struct.  Comes with a few extra benefits
 ```
