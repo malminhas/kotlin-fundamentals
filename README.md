@@ -235,4 +235,6 @@ list.filter { it > 10 }
 ## Frameworks
 * [Micronaut](https://micronaut.io/) - Lightweight framework for writing microservices.  Supports: Java, Kotlin, Groovy
 * [SpringBoot](https://spring.io/projects/spring-boot) - Industry heavyweight framework for writing backends.  Supports: Java, Kotlin, Scala, Groovy
+* [Vert.x](https://vertx.io/) - which also supports [Kotlin](https://vertx.io/docs/vertx-core/kotlin/)
 * [Ktor](https://ktor.io/) - Kotlin native async framework for microservices.  Can be used to build clients too.
+* [http4k](www.http4k.org/) - Kotlin native web framework for microservices.  Considered clean and compact.
